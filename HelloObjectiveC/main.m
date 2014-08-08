@@ -17,6 +17,13 @@ typedef unsigned char ColorComponent;
 typedef int KmPerHr;
 typedef int Hour;
 
+// Typedef'd structs
+typedef struct {
+    unsigned char red;
+    unsigned char green;
+    unsigned char blue;
+} Color;
+
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
@@ -39,7 +46,8 @@ int main(int argc, const char * argv[])
         Hour journeyDuration = 3;
         NSLog(@"You traveled at %dkm/h for %d hours. Total distance traveled is %dkm.", currentSpeed, journeyDuration, currentSpeed*journeyDuration);
         
-        
+        Color carColor = {255, 160, 0};
+        NSLog(@"Your car colour is (R: %hhu, G: %hhu, B:%hhu)", carColor.red, carColor.green, carColor.blue);
         
         
     }
